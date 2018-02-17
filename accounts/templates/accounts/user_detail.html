@@ -31,7 +31,7 @@
  						<a class='btn btn-link' style="text-decoration-color:white; border: 1px solid #1da1f2;border-radius: 25px; color: black; background-color: #1da1f2;width:auto;padding:5px" href='/profile/edit/'>
  							Edit Profile
  						</a>
- 						
+
  					</div>
  					<div class="u-floatRight u-textRight with-rightCaret" style="margin-right: 1em;margin-top: 10px;">
  						<a class='btn btn-link' style="text-decoration-color:white; border: 1px solid #1da1f2;border-radius: 25px; color: black; background-color: #1da1f2;width:auto;padding:5px" href='{{ object.profile.get_follow_url }}'>
@@ -39,7 +39,7 @@
  						</a>
 
  					</div>
- 						
+
  			</div>
  	</div>
  </div>
@@ -146,52 +146,79 @@
  							<a style="text-align:center;padding:10em" href='#' id='loadmore'>Load More Tweets</a>
 
  						</div>
- 						<div class="Grid-cell u-size1of3 u-lg-size1of3" style="background-color: white; margin-left:5%; width:30% !important;border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
- 							<h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;border-radius:15px;" > Following : <large style="color:white">{{ object.profile.get_following.count}} {{object.profile.get_followers.count}}</large></h1>
- 							{% for user in object.profile.get_following %}
- 							  <a style="margin: 5px; color: black;padding:5px;display: inline-block;text-align: center;"  href='/{{ user.username}}'>{{ user.username }}</a><br/>
- 							  {% empty %}
- 							  <h4 class="ProfileHeaderCard-screenname u-inlineBlock u-dir" style="margin-top: -10px"> Not following  users </h4>
- 							    {% endfor %}
- 							  <h1 class="ProfileHeaderCard-name"  style="background-color: #1c94e0;padding:1em;margin-top: 10px;border-radius:15px;">Followed By</h1>
- 								{% for profile in object.followed_by.all %}
- 							 <a style="margin: 5px; color: black;padding:5px;display: inline-block;text-align: center;"  href='/{{ profile.user.username}}'>{{ profile.user.username }}</a>
- 							  <br/>
- 							  {% empty %}
- 							  <h4 class="ProfileHeaderCard-screenname u-inlineBlock u-dir"> Not followed by  any users </h4>
- 							    {% endfor %}
+ 						<div class="Grid-cell u-size1of3 u-lg-size1of3">
+              <div class="SidebarCommonModules" style="width=100%">
+                <div class="module wtf-module js-wtf-module roaming-module has-content">
+                  <div class="flex-module">
+                    <div class="flex-module-header">
+                      <h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;border-radius:15px;" > Following : <large style="color:white">{{ object.profile.get_following_count.count}}</large></h1>
+                    </div>
 
-              <div class="flex-module">
-                <div class="flex-module-inner js-items-container">
-                  <ul class="u-cf">
-                    <li class="Footer-item Footer-copyright copyright">© 2018 Cucukoo</li>
-                    <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/about-cogzidel/" rel="noopener">About</a></li>
-                    <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/privacy-policy/" rel="noopener">Help Center</a></li>
-                    <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Terms</a></li>
-                    <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/privacy-policy/" rel="noopener">Privacy policy</a></li>
-                    <li class="Footer-item"><a class="Footer-link" href="//support.twitter.com/articles/20170514" rel="noopener">Cookies</a></li>
-                    <li class="Footer-item"><a class="Footer-link" href="//support.twitter.com/articles/20170451" rel="noopener">Ads info</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="//about.twitter.com/press/brand-assets" rel="noopener">Brand</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="https://blogs.cogzidel.com" rel="noopener">Blog</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Status</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/services/" rel="noopener">Apps</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Jobs</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Marketing</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Businesses</a></li>
-                      <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Developers</a></li>
-                  </ul>
+                    <div class="js-recommended-followers dashboard-user-recommendations flex-module-inner" data-section-id="wtf" style="opacity: 1;">
+                        <div style="border: 0px solid #1da1f2;margin: 10px; border-radius: 15px; text-decoration-color: white; background-color: white/*#1da1f2*/;width: 90%; display: inline-block; color: white">
+                          {% for user in object.profile.get_following %}
+             							  <a style="margin: 5px; color: black;padding:5px;display: inline-block;text-align: center;"  href='/{{ user.username}}'>{{ user.username }}</a><br/>
+             							  {% empty %}
+             							  <h4 class="ProfileHeaderCard-screenname u-inlineBlock u-dir" style="margin-top: -10px"> Not following  users </h4>
+             							    {% endfor %}
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="flex-module" style="margin-top:1em;">
+                    <div class="flex-module-header">
+                      <h1 class="ProfileHeaderCard-name"  style="background-color: #1c94e0;padding:1em;margin-top: 10px;border-radius:15px;">Followers : {{ object.followed_by.all.count }} </h1>
+
+                    </div>
+
+                    <div class="js-recommended-followers dashboard-user-recommendations flex-module-inner" data-section-id="wtf" style="opacity: 1;">
+                        <div style="border: 0px solid #1da1f2;margin: 10px; border-radius: 15px; text-decoration-color: white; background-color: white/*#1da1f2*/;width: 90%; display: inline-block; color: white">
+                          {% for profile in object.followed_by.all %}
+                          <a style="margin: 5px; color: black;padding:5px;display: inline-block;"  href='/{{ profile.user.username}}'>
+                            {{ profile.user.username }}
+                          </a>
+             							  <br/>
+             							  {% empty %}
+             							  <h4 class="ProfileHeaderCard-screenname u-inlineBlock u-dir"> Not followed by  any users </h4>
+             							    {% endfor %}
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="Footer module roaming-module" style="margin-top:1em;">
+                      <div class="flex-module">
+                        <div class="flex-module-inner js-items-container">
+                          <ul class="u-cf">
+                            <li class="Footer-item Footer-copyright copyright">© 2018 Cuckoo</li>
+                            <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/about-cogzidel/" rel="noopener">About</a></li>
+                            <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/privacy-policy/" rel="noopener">Help Center</a></li>
+                            <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Terms</a></li>
+                            <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/privacy-policy/" rel="noopener">Privacy policy</a></li>
+                            <li class="Footer-item"><a class="Footer-link" href="//support.twitter.com/articles/20170514" rel="noopener">Cookies</a></li>
+                            <li class="Footer-item"><a class="Footer-link" href="//support.twitter.com/articles/20170451" rel="noopener">Ads info</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="//about.twitter.com/press/brand-assets" rel="noopener">Brand</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="https://blogs.cogzidel.com" rel="noopener">Blog</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Status</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="http://www.cogzidel.com/services/" rel="noopener">Apps</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Jobs</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Marketing</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Businesses</a></li>
+                              <li class="Footer-item"><a class="Footer-link" href="" rel="noopener">Developers</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="flex-module Footer-adsModule">
+                        <div class="flex-module-footer u-table">
+                            <a href="http://www.cogzidel.com/" class="js-tooltip u-tableCell u-alignMiddle" rel="noopener">
+                              <a href="http://www.cogzidel.com/"><span class="Icon Icon--promotedStroked Icon--small"></span><span class="u-hiddenVisually">Advertise with Cogzidel</span>
+                            </a>
+                            <a class="u-tableCell u-alignMiddle" href="http://www.cogzidel.com/" rel="noopener">Advertise with Cogzidel</a>
+                          </div>
+                      </div>
+                  </div>
+
                 </div>
               </div>
-
-    <div class="flex-module Footer-adsModule">
-      <div class="flex-module-footer u-table">
-        <a href="//ads.twitter.com/?ref=gl-tw-tw-twitter-webtimeline" class="js-tooltip u-tableCell u-alignMiddle" rel="noopener" data-original-title="Advertise with Twitter">
-          <span class="Icon Icon--promotedStroked Icon--small"></span><span class="u-hiddenVisually">Advertise with Twitter</span>
-        </a>
-        <a class="u-tableCell u-alignMiddle" href="//ads.twitter.com/?ref=gl-tw-tw-twitter-webtimeline" rel="noopener">Advertise with Twitter</a>
-      </div>
-    </div>
-
  						</div>
  					</div>
 

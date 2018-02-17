@@ -97,9 +97,9 @@ class TweetListView(LoginRequiredMixin, ListView):
 		context['create_url'] = reverse_lazy("tweet:create")
 		return context
 
-	def get(self, request):
-		hashtags = HashTag.objects.all().order_by('-id')[:10]
-		return render(request, 'tweets/tweet_list.html', { "hashtags":hashtags})
+	# def get(self, request):
+	# 	hashtags = HashTag.objects.all().order_by('-id')[:10]
+	# 	return render(request, 'tweets/tweet_list.html', { "hashtags":hashtags})
 
 # def tweet_detail_view(request, id=8):
 # 	obj = Tweet.objects.get(id=id)

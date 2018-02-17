@@ -21,77 +21,99 @@
 <div id="page-outer" style="margin-top:5em;width:100%">
 	<div id="page-container" class="AppContent wrapper wrapper-home" style="width:100%">
 		<div class='Grid Grid--withGutter'>
-			<div class='Grid-cell u-size1of3 u-lg-size1of4' style="background-color: white; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
-				<div class="Grid Grid--withGutter">
-					<div class="Grid-cell" style="height:400px;">
-						<div style="background-color:white;">
-							<h1 class="ProfileHeaderCard-name" style="margin-top:1em;text-align:center;color:#2196f3">{{ request.user }}</h1>
-						</div>
-						<div class="ProfileSidebar ProfileSidebar--withLeftAlignment" style="background-color: white">
-							<!-- <h1 class="ProfileHeaderCard-name" style="margin-top: 15px; box-shadow:1px 1.5px 1px 1.5px #888888; height:15px;width:15px">{{ object.username }}</h1> -->
-							<p class="ProfileHeaderCard-screenname u-inlineBlock u-dir" style="margin-top: 15px">
-							</p>
-							<div class="module Trends trends">
-							  <div class="trends-inner">
-								<div class="flex-module trends-container context-trends-container">
-								  <div class="flex-module-header">
-										<!-- <h1 style="margin: 15px; ">{{ request.user }}</h1> -->
-								  </div>
+			
 
-								  <div class="flex-module-inner">
-										<!-- {{ object.profile.get_following.count}} -->
-										<div class="ProfileCardStats" style="margin-top: 10px">
-											<table>
-												<tr>
-													<ul class="ProfileCardStats-statList Arrange Arrange--bottom Arrange--equal">
-													<td>
-		 												 <li class="ProfileCardStats-stat Arrange-sizeFit" style="padding-right:15px;">
-		 													 <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" title="3 Tweets" data-element-term="tweet_stats">
-		 														 <span class="ProfileCardStats-statLabel u-block" style="color: #2196f3">Tweet
-		 														 </span>
-		 														 <span class="ProfileCardStats-statValue" style="color: black; text-align:center" >{{ request.user.profile.get_tweets_count}}
-		 														 </span>
-		 													 </a>
-		 												 </li>
-													</td>
-													<td>
-														<li class="ProfileCardStats-stat Arrange-sizeFit" style="padding-right:15px;>
-																<a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip"
-																		title="69 Following"
-																		data-element-term="following_stats">
-																	<span class="ProfileCardStats-statLabel u-block" style="color:#2196f3">Following
-																	</span>
-																	<span class="ProfileCardStats-statValue" data-count= data-is-compact="false" style="color: black; text-align:center">
-																	{{ request.user.profile.get_following.count}}</span>
-																</a>
-															</li>
-													</td>
-													<td>
-														<li class="ProfileCardStats-stat Arrange-sizeFit" style="padding-right:15px;>
-															<a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip"
-																	title="14 Followers" data-element-term="follower_stats">
-																<span class="ProfileCardStats-statLabel u-block" style="color: #2196f3">Followers
-																</span>
-																<span class="ProfileCardStats-statValue" data-count= data-is-compact="false" style="color: black; text-align:center">{{ request.user.followed_by.all.count}} 
-																</span>
-															</a>
-														</li>
-													</td>
-													</ul>
-												</tr>
-											</table>
+				<div class='Grid-cell u-size1of3 u-lg-size1of4' style="background-color: white; height: 25%; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
+					<div class="DashboardProfileCard  module">
 
-										 </div>
+	    <a class="DashboardProfileCard-bg u-bgUserColor u-block" style="background-color:#1c94e0; border-radius:15px; width:104%" href="" tabindex="-1" aria-hidden="true" rel="noopener">
+	    </a>
 
-								  </div>
-								</div>
-							  </div>
-							</div>
+	    <div class="DashboardProfileCard-content">
 
-						</div>
-					</div>
-				</div> 		  
-			</div>
+	          <div class="DashboardProfileCard-avatarContainer">
+	            <div id="choose-photo" class="controls avatar-settings inline-upload-avatar dropdown center">
+	              <a class="DashboardProfileCard-avatarLink ProfileAvatar-placeholder u-inlineBlock js-nav js-tooltip profile-picture js-dropdown-toggle" href="" title="{{ user.username }}" tabindex="-1" aria-hidden="true" data-placement="top" data-scribe-element="profile_avatar" role="button" aria-haspopup="true" data-original-title="Add a profile photo">
+	                  <div class="DashboardProfileCard-avatarImage u-borderUserColorLightHover u-bgUserColor" data-avatar-placeholder="true">
+	                    <span class="fa	 fa-user-circle" style="font-size:65px;color:#1c94e0"></span>
+	                  </div>
+	                  <img class="DashboardProfileCard-avatarImage js-action-profile-avatar" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png" alt="" style="display:none">
+	              </a>
+
+	                  <div class="uploader-image uploader-avatar clearfix">
+	                      <div class="dropdown-menu">
+	  <div class="dropdown-caret">
+	    <span class="caret-outer"></span>
+	    <span class="caret-inner"></span>
+	  </div>
+	  <ul>
+	    <li id="photo-choose-existing" class="photo-choose-existing upload-photo">
+	      <button type="button" class="dropdown-link">Upload photo</button>
+
+
+	    <div class="photo-selector">
+	  <button class="btn" type="button">
+	      Change photo
+	    </button>
+	  <span class="photo-file-name">No file selected</span>
+	  <div class="image-selector">
+	    <input type="hidden" name="media_file_name" class="file-name">
+	    <input type="hidden" name="media_data_empty" class="file-data">
+	    <label class="t1-label">
+	      <span class="u-hiddenVisually">Add Photo</span>
+	      <input type="file" name="media[]" class="file-input" tabindex="-1" title="Add Photo" accept="image/gif,image/jpeg,image/jpg,image/png">
+	    </label>
+	  </div>
+	</div></li>
+	      <li id="photo-choose-webcam" class="u-hidden">
+	        <button type="button" class="dropdown-link">Take photo</button>
+	      </li>
+	    <li id="photo-delete-image" class="u-hidden">
+	      <button type="button" class="dropdown-link">Remove</button>
+	    </li>
+	      <li class="dropdown-divider" role="presentation"></li>
+	      <li class="cancel-options">
+	        <button type="button" class="dropdown-link">Cancel</button>
+	      </li>
+	  </ul>
+	</div>
+	                  </div>
+	            </div>
+	          </div>
+
+	      <div class="DashboardProfileCard-userFields account-group">
+	        <div class="DashboardProfileCard-name u-textTruncate">
+	          <a class="u-textInheritColor js-nav" href="{{ request.user.profile.get_absolute_url }}" rel="noopener">{{ user.username }}</a><span class="UserBadges"></span>
+	        </div>
+	        <span class="DashboardProfileCard-screenname u-inlineBlock u-dir" dir="ltr">
+	          <span class="username u-dir" dir="ltr"><b class="u-linkComplex-target">{{user.email}}</b></span>
+	        </span>
+	      </div>
+
+	          <div class="ProfileCardStats">
+	    <ul class="ProfileCardStats-statList Arrange Arrange--bottom Arrange--equal"><li class="ProfileCardStats-stat Arrange-sizeFit">
+	        <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" href="" data-element-term="tweet_stats" data-original-title="9 Tweets">
+	          <span class="ProfileCardStats-statLabel u-block">Tweets</span>
+	          <span class="ProfileCardStats-statValue" data-count="" data-is-compact="false">{{  request.user.profile.get_tweets_count }}</span>
+	        </a>
+	      </li><li class="ProfileCardStats-stat Arrange-sizeFit">
+	          <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" href="" data-element-term="following_stats" data-original-title="71 Following">
+	            <span class="ProfileCardStats-statLabel u-block">Following</span>
+	            <span class="ProfileCardStats-statValue" data-count="" data-is-compact="false">{{ request.user.profile.get_following.count }}</span>
+	          </a>
+	        </li><li class="ProfileCardStats-stat Arrange-sizeFit">
+	          <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" href="" data-element-term="follower_stats" data-original-title="19 Followers">
+	            <span class="ProfileCardStats-statLabel u-block">Followers</span>
+	            <span class="ProfileCardStats-statValue" data-count="" data-is-compact="false">{{ request.user.followed_by.all.count }}</span>
+	          </a>
+	        </li>
+	    </ul>
+	  </div>
+	          <div id="dashboard-profile-prompt"></div>
+	    </div>
+	  </div>
+ 				</div>
+
 			<div class='Grid-cell u-size2of3 u-lg-size3of4' style="padding-left: 15px; width: 80%">
 				<div class="Grid Grid--withGutter">
 					<div class="Grid-cell u-lg-size2of3" style="background-color: white; width: 70%; ">
