@@ -40,7 +40,7 @@
   {
     color: red;
   }
- 
+
     /* body{
       font-family: "Lato"
     } */
@@ -56,7 +56,7 @@ data-fouc-class-names="swift-loading no-nav-banners"
       <script id="swift_loading_indicator" nonce="Es0zvn/tnRlm/G2hW1KXMw==">
         document.body.className=document.body.className+" "+document.body.getAttribute("data-fouc-class-names");
       </script>
-<!-- 
+<!--
     <a href="#timeline" class="u-hiddenVisually focusable">Skip to content</a> -->
 
 
@@ -89,7 +89,7 @@ data-fouc-class-names="swift-loading no-nav-banners"
   <ul class="nav secondary-nav language-dropdown">
     <li class="dropdown js-language-dropdown">
       <a href="{% url 'login' %}"" class="dropdown-toggle js-dropdown-toggle">
-       <span class="js-current-language"; style="color: white; font-style: Opensans;" >Log 
+       <span class="js-current-language"; style="color: white; font-style: Opensans;" >Log
        in</span>
       </a>
 
@@ -148,25 +148,25 @@ data-fouc-class-names="swift-loading no-nav-banners"
 <form method="post" action="{% url 'register' %}" class="t1-form clearfix signin js-signin" >
 {% csrf_token %}
 
-  
+
   <fieldset>
 
     <legend class="visuallyhidden">Sign Up</legend>
 
      <div class="clearfix field">
-     
+
          {{ form.first_name  }}
     </div>
      <div class="clearfix field">
-     
+
          {{ form.last_name  }}
     </div>
     <div class="clearfix field">
-     
+
          {{ form.username  }}
     </div>
     <div class="clearfix field email">
-   
+
         {{ form.email  }}
     </div>
     <div class="clearfix field">
