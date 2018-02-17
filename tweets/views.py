@@ -14,6 +14,7 @@ from django.views.generic import (
 from .forms import TweetModelForm
 from .mixins import FormUserNeededMixin, UserOwnerMixin
 from .models import Tweet
+from hashtags.models import HashTag
 
 
 #Retweet
@@ -65,7 +66,7 @@ class TweetDeleteView(LoginRequiredMixin, DeleteView):
 	template_name = 'tweets/delete_confirm.html'
 	success_url = reverse_lazy("tweet:list")
 
-#Retrieve 
+#Retrieve
 class TweetDetailView(DetailView):
 	# template_name = "tweets/detail_view.html"
 	queryset = Tweet.objects.all()
@@ -96,8 +97,9 @@ class TweetListView(LoginRequiredMixin, ListView):
 		context['create_url'] = reverse_lazy("tweet:create")
 		return context
 
-
-
+	def get(self, request):
+		hashtags = HashTag.objects.all().order_by('-id')[:10]
+		return render(request, 'tweets/tweet_list.html', { "hashtags":hashtags})
 
 # def tweet_detail_view(request, id=8):
 # 	obj = Tweet.objects.get(id=id)
