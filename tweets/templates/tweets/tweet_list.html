@@ -39,7 +39,7 @@
 								  </div>
 
 								  <div class="flex-module-inner">
-										{{ object.profile.get_following.count}}
+										<!-- {{ object.profile.get_following.count}} -->
 										<div class="ProfileCardStats" style="margin-top: 10px">
 											<table>
 												<tr>
@@ -49,7 +49,7 @@
 		 													 <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" title="3 Tweets" data-element-term="tweet_stats">
 		 														 <span class="ProfileCardStats-statLabel u-block" style="color: #2196f3">Tweet
 		 														 </span>
-		 														 <span class="ProfileCardStats-statValue" style="color: black; text-align:center" >4 {{ object.profile.get_following.count}}
+		 														 <span class="ProfileCardStats-statValue" style="color: black; text-align:center" >{{ request.user.profile.get_tweets_count}}
 		 														 </span>
 		 													 </a>
 		 												 </li>
@@ -62,7 +62,7 @@
 																	<span class="ProfileCardStats-statLabel u-block" style="color:#2196f3">Following
 																	</span>
 																	<span class="ProfileCardStats-statValue" data-count= data-is-compact="false" style="color: black; text-align:center">
-																		3</span>
+																	{{ request.user.profile.get_following.count}}</span>
 																</a>
 															</li>
 													</td>
@@ -72,7 +72,7 @@
 																	title="14 Followers" data-element-term="follower_stats">
 																<span class="ProfileCardStats-statLabel u-block" style="color: #2196f3">Followers
 																</span>
-																<span class="ProfileCardStats-statValue" data-count= data-is-compact="false" style="color: black; text-align:center">4
+																<span class="ProfileCardStats-statValue" data-count= data-is-compact="false" style="color: black; text-align:center">{{ request.user.followed_by.all.count}} 
 																</span>
 															</a>
 														</li>
