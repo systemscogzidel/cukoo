@@ -27,12 +27,19 @@
  						<p class="ProfileHeaderCard-screenname u-inlineBlock u-dir" style="margin-top: 15px"> Followers: {{object.followed_by.all.count}}
  						</p>
  					</a>
-
- 					<div class="u-floatRight u-textRight with-rightCaret" style="margin-right: 10em;margin-top: 10px;">
- 						<a class='btn btn-link' style="text-decoration-color:white; border: 1px solid #1da1f2;border-radius: 25px; color: black; background-color: #1da1f2;width:auto;padding:5px" href='{{ object.profile.get_follow_url }}'>
- 							{% if following %}Unfollowing{% else %}Follow{% endif %}
+ 					<div class="u-floatRight u-textRight with-rightCaret" style="margin-right: 1em;margin-top: 10px;">
+ 						<a class='btn btn-link' style="text-decoration-color:white; border: 1px solid #1da1f2;border-radius: 25px; color: black; background-color: #1da1f2;width:auto;padding:5px" href='/profile/edit/'>
+ 							Edit Profile
  						</a>
+ 						
  					</div>
+ 					<div class="u-floatRight u-textRight with-rightCaret" style="margin-right: 1em;margin-top: 10px;">
+ 						<a class='btn btn-link' style="text-decoration-color:white; border: 1px solid #1da1f2;border-radius: 25px; color: black; background-color: #1da1f2;width:auto;padding:5px" href='{{ object.profile.get_follow_url }}'>
+ 							{% if following %}Unfollowing{% else %}  Follow  {% endif %}
+ 						</a>
+
+ 					</div>
+ 						
  			</div>
  	</div>
  </div>
