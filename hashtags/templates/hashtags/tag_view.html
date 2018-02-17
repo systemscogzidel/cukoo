@@ -27,21 +27,26 @@
         <div class="AppContainer" style="margin-top: 5em;">
           <div class="AppContent-main u-cf">
             <div class="Grid Grid--withGutter" >
-              <div class="Grid-cell u-size1of3 u-lg-size1of4">
+              <div class="Grid-cell u-size1of3 u-lg-size1of4" style="word-break: break-all;">
 
                   <div class="SidebarCommonModules" style="margin:15px">
                     <div class="module wtf-module js-wtf-module roaming-module has-content">
                       <div class="flex-module">
-                        <div class="flex-module-header">
+                        <!-- <div class="flex-module-header">
                           <h3>Who to follow</h3>
                           <input type="button" value="Refresh" class="btn-link js-refresh-suggestions" style="padding:1em" onClick="document.location.reload(true)"/>
-                        </div>
+                        </div> -->
+                        <div class="flex-module-header" style="width:100%">
+												<p>
+													</p><h3>Who to follow</h3>
+													<small><input type="button" value="Refresh" class="btn-link js-refresh-suggestions" onclick="document.location.reload(true)"></small>
+											<p></p>
+											<hr>
+											</div>
 
                         <div class="js-recommended-followers dashboard-user-recommendations flex-module-inner" data-section-id="wtf" style="opacity: 1;">
                             <div style="border: 0px solid #1da1f2;margin: 10px; border-radius: 15px; text-decoration-color: white; background-color: white/*#1da1f2*/;width: 90%; display: inline-block; color: white">
-                              <!-- <p class="paddingconstant">
-                    						<a> <img class="image" src="https://www.thehindu.com/sci-tech/technology/internet/article17759222.ece/alternates/FREE_660/02th-egg-person" height="50em" width="50em"/>  </a>
-                    					</p> -->
+
                     					<p class="paddingconstant">
                     					<a> {% recommended request.user%} </a> </p>
 
