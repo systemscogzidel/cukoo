@@ -5,6 +5,7 @@ from django.db.models import signals
 from django.db.models.signals import post_save
 from django.conf import settings
 from django.db import models
+from tweets.models import Tweet
 
 # Create your models here.
 class UserProfileManager(models.Manager):
@@ -61,6 +62,9 @@ class UserProfile(models.Model):
 	def get_following_count(self):
 		users = self.following.all()
 		return users.exclude(username=self.user.username)
+
+	def get_tweets_count(self):
+		return Tweet.objects.filter(user__username=self.user.username).count()
 
 	def get_follow_url(self):
 		return reverse_lazy("profiles:follow", kwargs={"username":self.user.username})
