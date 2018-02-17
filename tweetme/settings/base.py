@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = '1iem^wu@aq5s!_4#(+#0(*(@yk0!x(tf6jet$^amu-l=(v^gun'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-CSRF_COOKIE_SECURE = True
+DEBUG = False
+CSRF_COOKIE_SECURE = False
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'cuckoo-.herokuapp.com']
 
 
