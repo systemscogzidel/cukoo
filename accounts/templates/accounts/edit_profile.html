@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block script %}
+<script>
+    $(document).ready(function(){
+    
+      $("#id_email").css("width", "50%");
+        });
+
+      $("#id_username").attr('placeholder', 'User name');
+      $("#id_first_name").attr('placeholder', 'First name');
+      $("#id_last_name").attr('placeholder', 'Last name');
+      $("#id_email").attr('placeholder', 'Email');
+</script>
+{% endblock %}
+{% block head %}
+<style>
+  body{
+    background-color: #ebebeb;
+  }
+   input, textarea,
+  {
+    width: 50% !important;
+  }
+ .textclass
+  {
+    width: 50% !important;
+  }
+</style>
+<title> Edit Profile</title>
+<link rel="stylesheet" href="https://abs.twimg.com/a/1515531216/css/t1/twitter_core.bundle.css" class="coreCSSBundles">
+    <link rel="stylesheet" class="moreCSSBundles" href="https://abs.twimg.com/a/1515531216/css/t1/twitter_more_1.bundle.css">
+    <link rel="stylesheet" class="moreCSSBundles" href="https://abs.twimg.com/a/1515531216/css/t1/twitter_more_2.bundle.css">
+
+    <link rel="dns-prefetch" href="https://pbs.twimg.com">
+    <link rel="dns-prefetch" href="https://t.co">
+    <link rel="preload" href="https://abs.twimg.com/k/en-gb/init.en-gb.0aa8dbebc3cfc543c67e.js" as="script">
+    <link rel="preload" href="https://abs.twimg.com/k/en-gb/0.commons.en-gb.cf50ad922f8e5cf8b01f.js" as="script">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+{% endblock %}
+
+{% block content%}
+  <div id="doc"  class="route-login login-responsive">
+
+        <div id="page-outer">
+          <div id="page-container" class="AppContent wrapper wrapper-login">
+
+            <div class="page-canvas">
+
+  <div class="signin-wrapper" data-login-message="" style="font-family:lato; font-style: normal;">
+    <h1 class="login" style="font-family:lato; font-style: normal; font-weight: bold">Edit Profile</h1>
+  <!--   {% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+
+    {% endif %}
+{% endif %} -->
+ <form method="post" class="t1-form clearfix signin js-signin" > 
+
+
+
+  
+      <fieldset>
+
+  <legend class="visuallyhidden">Edit Profile</legend>
+
+    <!-- {{form.as_p }} -->
+    {% csrf_token %}
+    <div class="clearfix field">
+     
+         {{ form.first_name  }}
+    </div>
+     <div class="clearfix field">
+     
+         {{ form.last_name  }}
+    </div>
+    <div class="clearfix field">
+     
+         {{ form.username  }}
+    </div>
+    <div class="clearfix field ">
+   <p class="email">
+        {{ form.email  }}
+      </p>
+    </div>
+
+
+
+</fieldset>
+
+      <div class="captcha js-captcha">
+      </div>
+      <div class="clearfix">
+
+
+  <button type="submit" class="submit EdgeButton EdgeButton--primary EdgeButtom--medium">Update</button>
+
+  <div class="subchck">
+ <!--    <label class="t1-label remember">
+      <input type="checkbox" value="1" name="remember_me" checked="checked">
+      Remember me
+      <span class="separator">·</span>
+
+    </label> -->
+  </div>
+</div>
+
+    </form>
+  </div>
+
+  <div class="clearfix mobile has-sms">
+    <p class="signup-helper">
+    
+      <a id="login-signup-link" href="/profile/password/">Change Password&#32;&raquo;</a>
+    </p>
+    <p class="signup-helper">
+    
+      <a id="login-signup-link" href="/">Return to home&#32;&raquo;</a>
+    </p>
+
+  </div>
+
+</div>
+
+          </div>
+        </div>
+</div>
+{% endblock content %}
+<!-- <form method="POST">
+   {% csrf_token %}
+   {{form.as_p }}
+   <button type="submit">Update</button>
+</form> -->

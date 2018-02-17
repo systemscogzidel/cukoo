@@ -1,0 +1,530 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"request"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"qs",
+				"qs_parent"
+			],
+			[
+				"pa",
+				"parent"
+			],
+			[
+				"Twee",
+				"Tweet"
+			],
+			[
+				"twee",
+				"tweetValue"
+			],
+			[
+				"Twe",
+				"Tweet"
+			],
+			[
+				"ge",
+				"get_serializer_context"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"A",
+				"AUTH_USER_MODEL"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"in",
+				"initialURL"
+			],
+			[
+				"twe",
+				"tweetContainer"
+			],
+			[
+				"coin",
+				"container"
+			],
+			[
+				"get",
+				"get_absolute_url"
+			],
+			[
+				"val",
+				"validate_content"
+			],
+			[
+				"is",
+				"is_retweet"
+			],
+			[
+				"p",
+				"parent"
+			],
+			[
+				"im",
+				"im_following"
+			],
+			[
+				"to",
+				"toggle_user"
+			],
+			[
+				"User",
+				"UserProfile"
+			],
+			[
+				"f",
+				"following"
+			],
+			[
+				"fe",
+				"fetchTweets"
+			],
+			[
+				"next",
+				"nextTweetUrl"
+			],
+			[
+				"ne",
+				"nextTweetUrl"
+			],
+			[
+				"fet",
+				"fetchUrl"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"tie",
+				"timestamp"
+			],
+			[
+				"T",
+				"TweetModelForm"
+			],
+			[
+				"ur",
+				"url"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"Upda",
+				"UpdateView"
+			],
+			[
+				"form",
+				"forms"
+			],
+			[
+				"cre",
+				"create_view"
+			],
+			[
+				"fo",
+				"form"
+			],
+			[
+				"de",
+				"def\tFunction"
+			],
+			[
+				"c",
+				"create"
+			],
+			[
+				"va",
+				"validate_content"
+			],
+			[
+				"a",
+				"all"
+			],
+			[
+				"obje",
+				"objects"
+			],
+			[
+				"ob",
+				"objects"
+			],
+			[
+				"o",
+				"objects"
+			],
+			[
+				"lis",
+				"tweet_list_view"
+			],
+			[
+				"url",
+				"urlpatterns"
+			],
+			[
+				"ue",
+				"username"
+			],
+			[
+				"ta",
+				"table_password"
+			],
+			[
+				"mysql_fet",
+				"mysql_fetch_assoc"
+			],
+			[
+				"mysql_nu",
+				"mysql_num_rows"
+			],
+			[
+				"mysql",
+				"mysql_query"
+			],
+			[
+				"my",
+				"mysql_error"
+			],
+			[
+				"mysql_re",
+				"mysql_real_escape_string"
+			],
+			[
+				"ass",
+				"assign"
+			],
+			[
+				"mysql_",
+				"mysql_query"
+			],
+			[
+				"mysql_s",
+				"mysql_select_db"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"pro",
+				"prod"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pu",
+				"public"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 55.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/manage.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/Procfile",
+		"/Users/apple/Documents/Test1/Sample/src/tweetme/settings/production.py",
+		"/Users/apple/Documents/Test1/Sample/src/requirements.txt",
+		"/Users/apple/Documents/Test1/Sample/src/tweetme/settings/base.py",
+		"/Users/apple/Documents/Test1/Sample/src/tweetme/settings/local.py",
+		"/Users/apple/Documents/Test1/Sample/src/accounts/models.py",
+		"/Users/apple/Documents/Test1/Sample/src/accounts/views.py",
+		"/Users/apple/Documents/Test1/Sample/src/accounts/templates/accounts/user_detail.html",
+		"/Users/apple/Documents/Test1/Sample/src/tweets/templates/tweets/tweet_list.html",
+		"/Users/apple/Documents/Test1/Sample/src/accounts/urls.py",
+		"/Users/apple/Documents/Test1/Sample/src/tweetme/urls.py",
+		"/Users/apple/Documents/Test1/Sample/src/accounts/templates/accounts/snippets/recommended.html",
+		"/Users/apple/Documents/Test1/Sample/src/accounts/templatetags/recommended.py",
+		"/Users/apple/Documents/Test1/Sample/src/accounts/templates/registration/login.html",
+		"/Users/apple/Documents/Test1/Sample/Procfile.txt",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/accounts/templatetags/__init__.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/models.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/api/serializers.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/templates/base.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/hashtags/templates/hashtags/tag_view.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/hashtags/api/__init__.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/hashtags/api/views.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweetme/urls.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/templates/search.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/api/views.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweetme/views.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/templates/tweets/search_form.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/api/urls.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/templates/tweets/tweet_list.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/templates/reply-modal.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/templates/tweets/tweet_detail.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/accounts/templates/accounts/user_detail.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/templates/tweets/form.html",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/accounts/api/urls.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/hashtags/signals.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/hashtags/models.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/tweetbook/src/tweets/urls.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/views.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/api/views.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/models.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/urls.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/api/serializers.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/api/pagination.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/validators.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/views.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/hashtags/templates/hashtags/tag_view.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/hashtags/views.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/hashtags/admin.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/hashtags/models.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/tweet_list.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/settings/base.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/settings/local.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/settings/production.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/tests.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/urls.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/models.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/templates/accounts/user_detail.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/urls.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/admin.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/admin.py",
+		"/Users/apple/Downloads/models.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/forms.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/api/serializers.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/api/urls.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/templates/base.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/search_form.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/form.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/__init__.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/accounts/api/__init__.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/create_view.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/tests.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/api/__init__.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/delete_confirm.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/templates/navbar.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/tweet_detail.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/templates/home.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/static-storage/static/css/custom.css",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/list_view.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/static-storage/bootstrap/css/bootstrap.min.css",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/static-storage/bootstrap/css/bootstrap.min.css.map",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/update_view.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/mixins.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/detail_view.html",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/templates/tweets/forms.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/migrations/__init__.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/manage.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/db.sqlite3",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweets/apps.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/views.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/static-serve/static/css/custom.css",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/settings/_init_.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/__init__.py",
+		"/Users/apple/Documents/karthiyayini/django/tweetme/src/tweetme/settings.py",
+		"/Users/apple/Documents/Andriod_backup/GIT/karthiyayani/dhanush_android/gradlew.bat",
+		"/Users/apple/Desktop/Lotus/Translate.xml",
+		"/Applications/XAMPP/xamppfiles/htdocs/webservice/nexkarlite/application/libraries/firebase-php/vendor/google/apiclient-services/src/Google/Service/Script/Resource/Scripts.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/firstwebsite/checklogin.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/firstwebsite/login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/firstwebsite/register.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/firstwebsite/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/webservice/nexkarlite/application/controllers/Driver.php",
+		"/Users/apple/Desktop/Haashini/NUVO_iOS/nuvo_ios(rider)/.git/config",
+		"/Users/apple/Desktop/Todo List/Todo List/AppDelegate.swift",
+		"/Applications/XAMPP/xamppfiles/htdocs/webservice/beautyinfluencer/application/config/untitled",
+		"/Applications/XAMPP/xamppfiles/htdocs/webservice/beautyinfluencer/application/controllers/Brand.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 27.0
+	},
+	"pinned_build_system": "",
+	"project": "manage.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 371.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

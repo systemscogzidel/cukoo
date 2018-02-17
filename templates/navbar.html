@@ -1,0 +1,99 @@
+{% load static %}
+<div class="topbar js-topbar">
+  <div class="ProfilePage-editingOverlay"></div>
+  <div class="global-nav" data-section-term="top_nav">
+      <div class="global-nav-inner">
+        <div class="container">
+          <h1 class="" style="display: inline-block; width: 24px; height: 21px;">
+            <img src="{%static 'bootstrap/img/twitter-logo-2.png'%}" style="height:25px; margin-top:10px; margin-left:50px; "alt="">
+            <span class="visuallyhidden">Twitter</span>
+          </h1>
+          <div class="pushstate-spinner"></div>
+          <div role="navigation" style="display: inline-block;">
+            <ul class="nav js-global-actions" id="global-actions">
+                <li id="global-nav-home" class="home active new" data-global-action="home">
+                  <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/" data-component-context="home_nav" data-nav="home">
+                    <span class="Icon Icon--home Icon--large"></span>
+                    <span class="Icon Icon--homeFilled Icon--large u-textUserColor"></span>
+                    <span class="text" aria-hidden="true">Cuckoo</span>
+                    <span class="u-hiddenVisually a11y-inactive-page-text">Home</span>
+                    <span class="u-hiddenVisually a11y-active-page-text">Home, current page.</span>
+                    <span class="u-hiddenVisually hidden-new-items-text">New Tweets available.</span>
+                  </a>
+                </li>
+            </ul>
+          </div>
+          {% if request.user.is_authenticated %}
+          <div class="pull-right nav-extras">
+              <div role="search">
+                  <form class="t1-form form-search js-search-form" action="/search" id="global-nav-search">
+                    <label class="visuallyhidden" for="search-query">Search query</label>
+                    <input class="search-input" type="text" id="search-query" placeholder="Search Tweets" name="q" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1" required>
+
+                    <span class="search-icon js-search-action">
+                      <button type="submit" class="Icon Icon--medium Icon--search nav-search" onclick="callme()" tabindex="-1">
+                        <span class="visuallyhidden">Search Tweets</span>
+                      </button>
+                    </span>
+                  </form>
+              </div>
+
+
+              <ul class="nav right-actions">
+                <li class="me dropdown session js-session" data-global-action="t1me" id="user-dropdown">
+
+                      <ul class="nav navbar-nav navbar-right">
+                          <li class="dropdown">
+                            <a href="/" class="" data-toggle="dropdown" role="button" aria-haspopup="true"  aria-expanded="false">
+                              <img class="Avatar Avatar--size32" style="box-shadow:none !important; margin-top:10px" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" alt="Profile and settings" data-user-id="2218875613">
+                            </a>
+
+                            <div class="DashUserDropdown dropdown-menu dropdown-menu--rightAlign is-forceRight is-autoCentered">
+                              <div class="dropdown-caret">
+                                    <span class="caret-outer"></span>
+                                    <span class="caret-inner"></span>
+                              </div>
+                                <ul tabindex="-1" role="menu" aria-labelledby="user-dropdown-toggle" aria-hidden="true">
+                                  <li class="current-user" data-name="profile" role="presentation">
+                                          <a href="{{ request.user.profile.get_absolute_url }}" class="js-nav" data-nav="view_profile" role="menuitem">
+                                            <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--me"></span>Profile
+                                          </a>
+                                        </li>
+
+                                  <li data-name="lists" role="presentation">
+                                          <a class="js-nav" href="/profile/edit/" data-nav="all_lists" role="menuitem">
+                                            <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--list"></span>Edit Profile
+                                          </a>
+                                        </li>
+
+                                  <li data-name="moments" role="presentation">
+                                          <a class="js-nav" href="/profile/password/" data-nav="all_moments" role="menuitem">
+                                            <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--lightning"></span>Change Password
+                                          </a>
+                                        </li>
+
+                                  </ul>
+                            </div>
+                          </li>
+                      </ul>
+                </li>
+
+                <li role="complementary" aria-labelledby="global-new-tweet-button" class="topbar-tweet-btn">
+                  <a href="{% url 'logout' %}" class="js-global-new-tweet js-tooltip EdgeButton EdgeButton--primary js-dynamic-tooltip" id="global-new-tweet-button" style="margin: 5px;padding: 10px;font-size: 15px;color: white; background-color:#1da1f2;opacity:1 !important;" data-placement="bottom" data-component-context="new_tweet_button" data-original-title role="button">Log Out</a>
+
+                </li>
+              </ul>
+          </div>
+          {% else %}
+          <div class="pull-right nav-extras">
+            <ul class="nav right-actions">
+              <li><a href="{% url 'login' %}">Login</a></li>
+              <li><a href="{% url 'register' %}">Register</a></li>
+            </ul>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% load recommended %}
+{% block script %}
+<script>
+	$(document).ready(function(){
+
+		loadTweetContainer("tweet-container")
+		// alert(object.profile.get_following.count);
+		});
+</script>
+<style>
+.form-control{
+	width: 100%;
+	height:inherit;
+}
+</style>
+{% endblock script %}
+
+{% block content %}
+
+<div id="page-outer" style="margin-top:5em;width:100%">
+	<div id="page-container" class="AppContent wrapper wrapper-home" style="width:100%">
+		<div class='Grid Grid--withGutter'>
+			<div class='Grid-cell u-size1of3 u-lg-size1of4' style="background-color: white; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
+				<div class="Grid Grid--withGutter">
+					<div class="Grid-cell" style="height:400px;">
+						<div style="background-color:white;">
+							<h1 class="ProfileHeaderCard-name" style="margin-top:1em;text-align:center;color:#2196f3">{{ request.user }}</h1>
+						</div>
+						<div class="ProfileSidebar ProfileSidebar--withLeftAlignment" style="background-color: white">
+							<!-- <h1 class="ProfileHeaderCard-name" style="margin-top: 15px; box-shadow:1px 1.5px 1px 1.5px #888888; height:15px;width:15px">{{ object.username }}</h1> -->
+							<p class="ProfileHeaderCard-screenname u-inlineBlock u-dir" style="margin-top: 15px">
+							</p>
+							<div class="module Trends trends">
+							  <div class="trends-inner">
+								<div class="flex-module trends-container context-trends-container">
+								  <div class="flex-module-header">
+										<!-- <h1 style="margin: 15px; ">{{ request.user }}</h1> -->
+								  </div>
+
+								  <div class="flex-module-inner">
+										{{ object.profile.get_following.count}}
+										<div class="ProfileCardStats" style="margin-top: 10px">
+											<table>
+												<tr>
+													<ul class="ProfileCardStats-statList Arrange Arrange--bottom Arrange--equal">
+													<td>
+		 												 <li class="ProfileCardStats-stat Arrange-sizeFit" style="padding-right:15px;">
+		 													 <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" title="3 Tweets" data-element-term="tweet_stats">
+		 														 <span class="ProfileCardStats-statLabel u-block" style="color: #2196f3">Tweet
+		 														 </span>
+		 														 <span class="ProfileCardStats-statValue" style="color: black; text-align:center" >4 {{ object.profile.get_following.count}}
+		 														 </span>
+		 													 </a>
+		 												 </li>
+													</td>
+													<td>
+														<li class="ProfileCardStats-stat Arrange-sizeFit" style="padding-right:15px;>
+																<a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip"
+																		title="69 Following"
+																		data-element-term="following_stats">
+																	<span class="ProfileCardStats-statLabel u-block" style="color:#2196f3">Following
+																	</span>
+																	<span class="ProfileCardStats-statValue" data-count= data-is-compact="false" style="color: black; text-align:center">
+																		3</span>
+																</a>
+															</li>
+													</td>
+													<td>
+														<li class="ProfileCardStats-stat Arrange-sizeFit" style="padding-right:15px;>
+															<a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip"
+																	title="14 Followers" data-element-term="follower_stats">
+																<span class="ProfileCardStats-statLabel u-block" style="color: #2196f3">Followers
+																</span>
+																<span class="ProfileCardStats-statValue" data-count= data-is-compact="false" style="color: black; text-align:center">4
+																</span>
+															</a>
+														</li>
+													</td>
+													</ul>
+												</tr>
+											</table>
+
+										 </div>
+
+								  </div>
+								</div>
+							  </div>
+							</div>
+
+						</div>
+					</div>
+				</div> 		  
+			</div>
+			<div class='Grid-cell u-size2of3 u-lg-size3of4' style="padding-left: 15px; width: 80%">
+				<div class="Grid Grid--withGutter">
+					<div class="Grid-cell u-lg-size2of3" style="background-color: white; width: 70%; ">
+						<!-- <div role="main" aria-labelledby="content-main-heading" class="content-main top-timeline-tweetbox" id="timeline" tabindex="-1" style="width:auto"> -->
+							<div class="timeline-tweet-box">
+						    <div class="home-tweet-box tweet-box component tweet-user">
+									<div class="tweet-content">
+										<div>
+											{% if not request.GET.q %}
+											<div class='' style="background-color: white">
+												{% include "tweets/form.html" with form=create_form action_url=create_url btn_title='Tweet' form_class='tweet-form' %}
+											</div>
+											<hr/>
+											{% endif %}
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-header">
+								 <div class="header-inner">
+									 <h2 id="content-main-heading" class="js-timeline-title" style="text-align:center;color:#2196f3">Tweets</h2>
+								 </div>
+							</div>
+
+							<div class="stream-container conversations-enabled " data-max-position="959372725138743296" data-min-position="959370722487041999">
+								<div class="stream">
+									<div style='background-color:rgb(255, 255, 255); padding-left: 15px;'  >
+									<div id='tweet-container' data-url='/api/tweet/'>
+
+									</div>
+									<a href='#' id='loadmore'>Load More Tweets</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					<div class="Grid-cell u-size1of3" style=" width: 30%; padding-left: 15px;">
+					<div class="Grid Grid--withGutter" style="background-color: white; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888; height:auto">
+							<div class="Grid-cell" style="height:auto" >
+								<div class="SidebarCommonModules">
+									<div class="module wtf-module js-wtf-module roaming-module has-content">
+										<div class="flex-module" style="width:100%">
+											<div class="flex-module-header" style="width:100%">
+												<p>
+													<h3>Who to follow</h3>
+													<small><input type="button" value="Refresh" class="btn-link js-refresh-suggestions" onClick="document.location.reload(true)"></small>
+											</p>
+											<hr/>
+											</div>
+
+											<div class="js-recommended-followers dashboard-user-recommendations flex-module-inner" data-section-id="wtf" style="opacity: 1;width:100%;height:100%;word-break: break-all">
+												<p>
+												 {% recommended request.user%} </p>
+											</div>
+										</div>
+
+									</div>
+								</div>
+					</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

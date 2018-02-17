@@ -1,0 +1,172 @@
+
+ {% extends "base.html" %}
+
+ {% block script %}
+ 		<script>
+ 			$(document).ready(function(){
+ 			loadTweetContainer("tweet-container")
+ 		  });
+         </script>
+
+ {% endblock script %}
+
+ {% block content %}
+ <div class="SearchNavigation">
+ 	<div class="SearchNavigation-canopy u-bgUserColor">
+ 		<div class="SearchNavigation-textContainer">
+ 			<h1 class="SearchNavigation-titleText" style="padding-left: 3em;" dir="ltr">
+ 				<h1 class="ProfileHeaderCard-name" style="margin-left:5em;margin-top: 5px box-shadow:1px 1.5px 1px 1.5px #888888">{{ object.username }} {{ object.email }} {{ object.first_name}} {{ object.last_name}}</h1>
+
+ 			</h1>
+ 		</div>
+
+ 	</div>
+ 	<div class="AdaptiveFiltersBar" style="height:3em">
+ 		<div style="">
+ 					<a style="margin-left:12em">
+ 						<p class="ProfileHeaderCard-screenname u-inlineBlock u-dir" style="margin-top: 15px"> Followers: {{object.followed_by.all.count}}
+ 						</p>
+ 					</a>
+
+ 					<div class="u-floatRight u-textRight with-rightCaret" style="margin-right: 10em;margin-top: 10px;">
+ 						<a class='btn btn-link' style="text-decoration-color:white; border: 1px solid #1da1f2;border-radius: 25px; color: black; background-color: #1da1f2;width:auto;padding:5px" href='{{ object.profile.get_follow_url }}'>
+ 							{% if following %}Unfollowing{% else %}Follow{% endif %}
+ 						</a>
+ 					</div>
+ 			</div>
+ 	</div>
+ </div>
+ <div id="page-outer" style="margin-top:8em">
+ 	<div id="page-container" class="AppContent wrapper wrapper-home">
+
+ 		<div class='Grid Grid--withGutter' style="margin-top:15em">
+ 				<div class='Grid-cell u-size1of3 u-lg-size1of4' style="background-color: white; height: 450px; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
+					<div class="DashboardProfileCard  module">
+
+	    <a class="DashboardProfileCard-bg u-bgUserColor u-block" style="background-color:#1c94e0; border-radius:15px; width:104%" href="/KarthiyayiniT" tabindex="-1" aria-hidden="true" rel="noopener">
+	    </a>
+
+	    <div class="DashboardProfileCard-content">
+
+	          <div class="DashboardProfileCard-avatarContainer">
+	            <div id="choose-photo" class="controls avatar-settings inline-upload-avatar dropdown center">
+	              <a class="DashboardProfileCard-avatarLink ProfileAvatar-placeholder u-inlineBlock js-nav js-tooltip profile-picture js-dropdown-toggle" href="{{ user.username }}" tabindex="-1" aria-hidden="true" data-placement="top" data-scribe-element="profile_avatar" role="button" aria-haspopup="true" data-original-title="Add a profile photo">
+	                  <div class="DashboardProfileCard-avatarImage u-borderUserColorLightHover u-bgUserColor" data-avatar-placeholder="true">
+	                    <span class="fa	 fa-user-circle" style="font-size:65px;color:#1c94e0"></span>
+	                  </div>
+	                  <img class="DashboardProfileCard-avatarImage js-action-profile-avatar" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png" alt="" style="display:none">
+	              </a>
+
+	                  <div class="uploader-image uploader-avatar clearfix">
+	                      <div class="dropdown-menu">
+	  <div class="dropdown-caret">
+	    <span class="caret-outer"></span>
+	    <span class="caret-inner"></span>
+	  </div>
+	  <ul>
+	    <li id="photo-choose-existing" class="photo-choose-existing upload-photo">
+	      <button type="button" class="dropdown-link">Upload photo</button>
+
+
+	    <div class="photo-selector">
+	  <button class="btn" type="button">
+	      Change photo
+	    </button>
+	  <span class="photo-file-name">No file selected</span>
+	  <div class="image-selector">
+	    <input type="hidden" name="media_file_name" class="file-name">
+	    <input type="hidden" name="media_data_empty" class="file-data">
+	    <label class="t1-label">
+	      <span class="u-hiddenVisually">Add Photo</span>
+	      <input type="file" name="media[]" class="file-input" tabindex="-1" title="Add Photo" accept="image/gif,image/jpeg,image/jpg,image/png">
+	    </label>
+	  </div>
+	</div></li>
+	      <li id="photo-choose-webcam" class="u-hidden">
+	        <button type="button" class="dropdown-link">Take photo</button>
+	      </li>
+	    <li id="photo-delete-image" class="u-hidden">
+	      <button type="button" class="dropdown-link">Remove</button>
+	    </li>
+	      <li class="dropdown-divider" role="presentation"></li>
+	      <li class="cancel-options">
+	        <button type="button" class="dropdown-link">Cancel</button>
+	      </li>
+	  </ul>
+	</div>
+
+	                  </div>
+	            </div>
+	          </div>
+
+	      <div class="DashboardProfileCard-userFields account-group">
+	        <div class="DashboardProfileCard-name u-textTruncate">
+	          <a class="u-textInheritColor js-nav" href="" rel="noopener">{{ user.username }}</a><span class="UserBadges"></span>
+	        </div>
+	        <span class="DashboardProfileCard-screenname u-inlineBlock u-dir" dir="ltr">
+	          <a class="DashboardProfileCard-screennameLink u-linkComplex u-linkClean js-nav" href="s" rel="noopener"><span class="username u-dir" dir="ltr">@<b class="u-linkComplex-target">{{user.email}}</b></span></a>
+	        </span>
+	      </div>
+
+	          <div class="ProfileCardStats">
+	    <ul class="ProfileCardStats-statList Arrange Arrange--bottom Arrange--equal"><li class="ProfileCardStats-stat Arrange-sizeFit">
+	        <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" href="/KarthiyayiniT" data-element-term="tweet_stats" data-original-title="9 Tweets">
+	          <span class="ProfileCardStats-statLabel u-block">Tweets</span>
+	          <span class="ProfileCardStats-statValue" data-count="9" data-is-compact="false">9</span>
+	        </a>
+	      </li><li class="ProfileCardStats-stat Arrange-sizeFit">
+	          <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" href="/KarthiyayiniT/following" data-element-term="following_stats" data-original-title="71 Following">
+	            <span class="ProfileCardStats-statLabel u-block">Following</span>
+	            <span class="ProfileCardStats-statValue" data-count="71" data-is-compact="false">{{ object.profile.get_following.count}}</span>
+	          </a>
+	        </li><li class="ProfileCardStats-stat Arrange-sizeFit">
+	          <a class="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip" href="/KarthiyayiniT/followers" data-element-term="follower_stats" data-original-title="19 Followers">
+	            <span class="ProfileCardStats-statLabel u-block">Followers</span>
+	            <span class="ProfileCardStats-statValue" data-count="19" data-is-compact="false">19</span>
+	          </a>
+	        </li>
+	    </ul>
+	  </div>
+
+
+	          <div id="dashboard-profile-prompt"></div>
+
+	    </div>
+	  </div>
+ 					<!-- <h3 class="ProfileHeaderCard-name" style="padding:1em;border-radius:15px; color:black" > {{ object.username }} </large></h3>
+ 					<h4 class="Profile" style="padding:1em;border-radius:15px; color:black" > {{ object.email }} </h4>
+ 					<h4 class="Profile" style="padding:1em;border-radius:15px; color:black" > {{ object.first_name }} </h4>
+ 					<h4 class="Profile" style="padding:1em;border-radius:15px; color:black" > {{ object.last_name }} </h4> -->
+
+ 				</div>
+ 				<div class='Grid-cell u-size2of3 u-lg-size3of4' style="padding-left: 25px; width: 100%;">
+ 					<div class="Grid Grid--withGutter" style="width:100%">
+ 						<div class="Grid-cell u-size2of3 u-lg-size2of3" style="background-color: white; width:65% !important;border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
+ 							<h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;text-align:center; width:101%; border-radius:15px;"  >Tweets</h1>
+ 							<div id='tweet-container' style="padding:2em" data-url='/api/{{ object.username }}/tweet'>
+ 							</div>
+ 							<a style="text-align:center;padding:10em" href='#' id='loadmore'>Load More Tweets</a>
+
+ 						</div>
+ 						<div class="Grid-cell u-size1of3 u-lg-size1of3" style="background-color: white; width:30% !important;border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
+ 							<h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;border-radius:15px;" > Following : <large style="color:white">{{ object.profile.get_following.count}} {{object.profile.get_followers.count}}</large></h1>
+ 							{% for user in object.profile.get_following %}
+ 							  <a style="margin: 5px; color: black;padding:5px;display: inline-block;text-align: center;"  href='/{{ user.username}}'>{{ user.username }}</a><br/>
+ 							  {% empty %}
+ 							  <h4 class="ProfileHeaderCard-screenname u-inlineBlock u-dir" style="margin-top: -10px"> Not following  users </h4>
+ 							    {% endfor %}
+ 							  <h1 class="ProfileHeaderCard-name"  style="background-color: #1c94e0;padding:1em;margin-top: 10px;border-radius:15px;">Followed By</h1>
+ 								{% for profile in object.followed_by.all %}
+ 							 <a style="margin: 5px; color: black;padding:5px;display: inline-block;text-align: center;"  href='/{{ profile.user.username}}'>{{ profile.user.username }}</a>
+ 							  <br/>
+ 							  {% empty %}
+ 							  <h4 class="ProfileHeaderCard-screenname u-inlineBlock u-dir"> Not followed by  any users </h4>
+ 							    {% endfor %}
+ 						</div>
+ 					</div>
+ 				</div>
+ 		</div>
+ 	</div>
+ </div>
+
+  {% endblock content %}

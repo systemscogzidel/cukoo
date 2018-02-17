@@ -1,0 +1,76 @@
+<!-- Modal -->
+{% load static %}
+<script type="text/javascript">
+function checktext() {
+  var len = $("#tweetReplyArea").val().length;
+  if (len >= 3) {
+        $("#replytweetbtn").prop("disabled", true);
+    }
+    else{
+     $("#replytweetbtn").prop("disabled", false);
+    }
+}
+</script>
+<style>
+  .image{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    /* padding-right: 5px; */
+  }
+  a .image {
+    float: left;
+  }
+</style>
+<div class="modal draggable" id="replyModal" role="alertdialog" aria-labelledby="global-tweet-dialog-header" aria-describedby="global-tweet-dialog-body" style="display:none">
+    <div class="js-first-tabstop"></div>
+
+    <div class="modal-content" role="document">
+        <button type="button" class="modal-btn modal-close js-close" data-dismiss="modal" aria-label="Close">
+          <span class="Icon Icon--close Icon--medium">
+          <span class="visuallyhidden" aria-hidden="true">&times;</span>
+          </span>
+        </button>
+        <form class="from tweet-form"> {% csrf_token %}
+          <div class="modal-header">
+
+              <h5 class="modal-title" id="global-tweet-dialog-header">Modal title</h5>
+          </div>
+
+          <div class="modal-body modal-tweet" id="global-tweet-dialog-body">
+                <div class="content">
+                        <div class="stream-item-header">
+                            <img class="account-group" src="{%static 'bootstrap/img/default_user.jpg'%}" style="border-radius:25px" height="50em" width="50em" alt></img>
+                            <span class="FullNameGroup">
+                                <strong class="" id="global-tweet-user"></strong>
+                                <span>‏ </span>
+                                <!-- <span class="Icon Icon--verified"></span> -->
+                                <small id="global-tweet-user-time"> time </small>
+                            </span>
+                        </div>
+                        <div class="js-tweet-text-container">
+                              <p class="TweetTextSize  js-tweet-text tweet-text" data-aria-label-part="0" id ="global-tweet-content" style="margin:1em;font-size:large"></p>
+                        </div>
+
+                         <div class="AdaptiveMediaOuterContainer">
+                          <div class="AdaptiveMedia AdaptiveMedia--hiddenWhenNotExpanded is-square " style="max-width:471px;">
+                          </div>
+                         </div>
+                         <div class="stream-item-footer">
+                         </div>
+                </div>
+
+          </div>
+
+          <div class="modal-tweet-form-container">
+            <textarea aria-hidden="true" id='tweetReplyArea' class='form-control' name='content' style="margin: 10px 20px 10px 10px; width: 472px; height: 113px;" onkeypress="checktext()"></textarea>
+          </div>
+
+          <div class="TweetBoxToolbar-tweetButton tweet-button">
+            <input type="button" class="EdgeButton EdgeButton-primary" data-dismiss="modal" value='Close' style="margin-right:  5px;margin-left:  5px;margin-bottom: 5px;">
+            <input id="replytweetbtn" type="submit" class="EdgeButton EdgeButton-primary" value='Reply' name="reply" style="margin-right: 5px;margin-left:  5px;margin-bottom: 5px;" disabled>
+          </div>
+        </form>
+    </div>
+</div>
