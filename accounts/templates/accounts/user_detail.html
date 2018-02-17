@@ -43,8 +43,8 @@
  			</div>
  	</div>
  </div>
- <div id="page-outer" style="margin-top:8em">
- 	<div id="page-container" class="AppContent wrapper wrapper-home">
+ <div id="page-outer" style="margin-top:8em; width:100%;">
+ 	<div id="page-container" class="AppContent wrapper wrapper-home" style="width:100%">
 
  		<div class='Grid Grid--withGutter' style="margin-top:15em">
  				<div class='Grid-cell u-size1of3 u-lg-size1of4' style="background-color: white; height: 25%; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
@@ -146,10 +146,10 @@
  							<a style="text-align:center;padding:10em" href='#' id='loadmore'>Load More Tweets</a>
 
  						</div>
- 						<div class="Grid-cell u-size1of3 u-lg-size1of3">
+ 						<div class="Grid-cell u-size1of3 u-lg-size1of3" style="margin-left:10px">
               <div class="SidebarCommonModules" style="width=100%">
                 <div class="module wtf-module js-wtf-module roaming-module has-content">
-                  <div class="flex-module">
+                  <div class="flex-module" style="box-shadow:1px 1.5px 1px 1.5px #888888; border-radius:15px">
                     <div class="flex-module-header">
                       <h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;border-radius:15px;" > Following : <large style="color:white">{{ object.profile.get_following_count.count}}</large></h1>
                     </div>
@@ -165,7 +165,7 @@
                     </div>
                   </div>
 
-                  <div class="flex-module" style="margin-top:1em;">
+                  <div class="flex-module" style="margin-top:1em; box-shadow:1px 1.5px 1px 1.5px #888888; border-radius:15px">
                     <div class="flex-module-header">
                       <h1 class="ProfileHeaderCard-name"  style="background-color: #1c94e0;padding:1em;margin-top: 10px;border-radius:15px;">Followers : {{ object.followed_by.all.count }} </h1>
 
@@ -185,8 +185,8 @@
                     </div>
                   </div>
 
-                  <div class="Footer module roaming-module" style="margin-top:1em;">
-                      <div class="flex-module">
+                  <div class="Footer module roaming-module" style="margin-top:1em; box-shadow:1px 1.5px 1px 1.5px #888888; border-radius:15px;">
+                      <div class="flex-module" >
                         <div class="flex-module-inner js-items-container">
                           <ul class="u-cf">
                             <li class="Footer-item Footer-copyright copyright">© 2018 Cuckoo</li>
