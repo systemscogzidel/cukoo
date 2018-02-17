@@ -122,11 +122,10 @@ data-fouc-class-names="swift-loading no-nav-banners"
 
     {% endif %}
 {% endif %}
+
 <form method="post" action="{% url 'login' %}" class="t1-form clearfix signin js-signin" >
 {% csrf_token %}
-<form method="post" action="{% url 'login' %}" class="t1-form clearfix signin js-signin" >
-{% csrf_token %}
-    <form action="https://twitter.com/sessions" class="t1-form clearfix signin js-signin" method="post">
+  
       <fieldset>
 
   <legend class="visuallyhidden">Log in</legend>
