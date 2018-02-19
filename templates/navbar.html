@@ -25,7 +25,7 @@
           </div>
           {% if request.user.is_authenticated %}
           <div class="pull-right nav-extras">
-              <div role="search">
+              <div role="search" style="margin-bottom: 10px;">
                   <form class="t1-form form-search js-search-form" action="/search" id="global-nav-search">
                     <label class="visuallyhidden" for="search-query">Search query</label>
                     <input class="search-input" type="text" id="search-query" placeholder="Search Tweets" name="q" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1" required>
@@ -79,7 +79,7 @@
                 </li>
 
                 <li role="complementary" aria-labelledby="global-new-tweet-button" class="topbar-tweet-btn">
-                  <a href="{% url 'logout' %}" class="js-global-new-tweet js-tooltip EdgeButton EdgeButton--primary js-dynamic-tooltip" id="global-new-tweet-button" style="margin: 5px;padding: 10px;font-size: 15px;color: white; background-color:#1da1f2;opacity:1 !important;" data-placement="bottom" data-component-context="new_tweet_button" data-original-title role="button">Log Out</a>
+                  <a href="{% url 'logout' %}" class="js-global-new-tweet js-tooltip EdgeButton EdgeButton--primary js-dynamic-tooltip" id="global-new-tweet-button" style="margin: 15px;padding: 10px;font-size: 15px;color: white; background-color:#1da1f2;opacity:1 !important;" data-placement="bottom" data-component-context="new_tweet_button" data-original-title role="button">Log Out</a>
 
                 </li>
               </ul>

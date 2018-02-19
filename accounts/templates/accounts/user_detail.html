@@ -47,10 +47,10 @@
  	<div id="page-container" class="AppContent wrapper wrapper-home" style="width:100%">
 
  		<div class='Grid Grid--withGutter' style="margin-top:15em">
- 				<div class='Grid-cell u-size1of3 u-lg-size1of4' style="background-color: white; height: 25%; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
+ 				<div class='Grid-cell u-size1of3 u-lg-size1of4' style="background-color: white; width:100%;height: 25%; border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
 					<div class="DashboardProfileCard  module">
 
-	    <a class="DashboardProfileCard-bg u-bgUserColor u-block" style="background-color:#1c94e0; border-radius:15px; width:104%" href="" tabindex="-1" aria-hidden="true" rel="noopener">
+	    <a class="DashboardProfileCard-bg u-bgUserColor u-block" style="background-color:#1c94e0; border-radius:15px; width:100%" href="" tabindex="-1" aria-hidden="true" rel="noopener">
 	    </a>
 
 	    <div class="DashboardProfileCard-content">
@@ -140,7 +140,7 @@
  				<div class='Grid-cell u-size2of3 u-lg-size3of4' style="padding-left: 25px; width: 100%;">
  					<div class="Grid Grid--withGutter" style="width:100%">
  						<div class="Grid-cell u-size2of3 u-lg-size2of3" style="background-color: white; width:65% !important;border-radius:15px; box-shadow: 1px 1.5px 1px 1.5px #888888">
- 							<h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;text-align:center; width:101%; border-radius:15px;"  >Tweets</h1>
+ 							<h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;text-align:center;height:100%; width:100%; border-radius:15px;" > Tweets </h1>
  							<div id='tweet-container' style="padding:2em" data-url='/api/{{ object.username }}/tweet'>
  							</div>
  							<a style="text-align:center;padding:10em" href='#' id='loadmore'>Load More Tweets</a>
@@ -148,9 +148,9 @@
  						</div>
  						<div class="Grid-cell u-size1of3 u-lg-size1of3" style="margin-left:10px">
               <div class="SidebarCommonModules" style="width=100%">
-                <div class="module wtf-module js-wtf-module roaming-module has-content">
-                  <div class="flex-module" style="box-shadow:1px 1.5px 1px 1.5px #888888; border-radius:15px">
-                    <div class="flex-module-header">
+                <div class="module wtf-module js-wtf-module roaming-module has-content" style="margin:0px">
+                  <div class="flex-module" style="box-shadow:1px 1.5px 1px 1.5px #888888; border-radius:15px;padding:0px; margin:0px;">
+                    <div class="flex-module-header" style="width:100%">
                       <h1 class="ProfileHeaderCard-name" style="background-color: #1c94e0;padding:1em;border-radius:15px;" > Following : <large style="color:white">{{ object.profile.get_following_count.count}}</large></h1>
                     </div>
 

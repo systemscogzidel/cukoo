@@ -1,15 +1,28 @@
 <!-- Modal -->
 {% load static %}
 <script type="text/javascript">
-function checktext() {
+$("#replytweetbtn").prop("disabled", true);
+function checktext(){
+  $("#replytweetbtn").prop("disabled", true);
   var len = $("#tweetReplyArea").val().length;
-  if (len >= 3) {
-        $("#replytweetbtn").prop("disabled", true);
+  alert(len)
+  if(len >= 7){
+    $("#replytweetbtn").prop("disabled", false);
+    alert("if");
     }
-    else{
-     $("#replytweetbtn").prop("disabled", false);
+    else if (len < 7){
+     $("#replytweetbtn").prop("disabled", true);
+     alert("else");
+    }
+    else if (len==6) {
+      $("#replytweetbtn").prop("disabled", true);
     }
 }
+// function disableButton()
+// {
+//   $('#replyModal').modal('hide')
+//   $("#replytweetbtn").prop("disabled", true);
+// }
 </script>
 <style>
   .image{
